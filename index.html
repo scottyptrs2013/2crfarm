@@ -28,6 +28,23 @@ input,select,textarea{width:100%;padding:12px;border:1px solid #b8aa92;border-ra
 .total{font-size:1.3rem;font-weight:900;margin-top:18px;padding-top:15px;border-top:2px solid var(--line)}
 footer{background:var(--ink);color:#fff;text-align:center;padding:28px;margin-top:20px}
 @media(max-width:650px){.grid{grid-template-columns:1fr}.hero{padding:25px 18px}}
+
+/* Just a little ranch-house polish — no layout/content changes */
+body{background:radial-gradient(circle at 20% 0%,#fffdf6 0,transparent 34%),radial-gradient(circle at 100% 20%,#e7ddc9 0,transparent 28%),var(--cream)}
+.wrap{position:relative}
+header{position:relative}
+header:after{content:"✦  2ND CHANCE RANCH  ✦";display:block;margin:8px auto 0;color:var(--gold);font-size:.72rem;letter-spacing:4px;font-weight:800;opacity:.9}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--green) 0%,#314b2f 55%,#182719 100%)}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.13);border-radius:50%;pointer-events:none}
+.hero:before{width:280px;height:280px;right:-110px;top:-150px}
+.hero:after{width:190px;height:190px;left:-90px;bottom:-120px}
+.hero>*{position:relative;z-index:1}
+.section-title:after{content:"";display:block;width:58px;height:3px;background:var(--gold);margin:10px auto 0;border-radius:99px}
+.card,.flavor,form{position:relative;overflow:hidden}
+.card:before,.flavor:before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--gold),transparent)}
+.btn{box-shadow:0 5px 14px #0002}
+footer{position:relative}
+footer:before{content:"✦  ✦  ✦";display:block;color:var(--gold);letter-spacing:7px;margin-bottom:8px;font-size:.8rem}
 </style>
 </head>
 <body>
