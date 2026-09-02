@@ -5,46 +5,49 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>2nd Chance Ranch | Farm Fresh & Small Batch</title>
 <style>
-:root{--ink:#201b17;--brown:#6d4c2f;--cream:#f5efe3;--gold:#b58a4a;--line:#cbbda5;--green:#263d27;--green2:#3f5d38;--white:#fffdf6;--shadow:0 10px 28px #0002}
-*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
-.wrap{max-width:1100px;margin:auto;padding:22px}header{text-align:center;padding:8px 0 18px}
-.logo{width:min(720px,100%);max-height:390px;object-fit:contain}
-.tag{font-weight:700;letter-spacing:3px;color:var(--brown)}
-.hero{background:linear-gradient(135deg,var(--green),#182719);color:#fff;border-radius:20px;padding:40px 34px;text-align:center;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)}
-.hero h2{font-family:Georgia,serif;font-size:clamp(1.8rem,4vw,3rem);margin:0 0 10px}
-.hero p{font-size:1.1rem;line-height:1.6;max-width:700px;margin:0 auto 22px}
-.btn{display:inline-block;background:var(--gold);color:#fff;text-decoration:none;font-weight:800;padding:14px 22px;border-radius:9px;margin:5px;transition:transform .15s ease,box-shadow .15s ease}.btn:hover{transform:translateY(-2px);box-shadow:0 7px 18px #0003}
-section{padding:48px 0}h2.section-title{font-family:Georgia,serif;text-align:center;font-size:clamp(2rem,5vw,2.7rem);margin:0 0 28px;color:var(--green)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
-.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:25px;box-shadow:var(--shadow);transition:transform .15s ease,box-shadow .15s ease}.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px #0003}
-.card h3{font-family:Georgia,serif;margin-top:0;color:var(--brown);font-size:1.45rem}.price{font-size:1.5rem;font-weight:900;color:#8b342b}
-.flavors{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
-.flavor{background:var(--white);border-left:5px solid var(--gold);padding:15px;border-radius:10px;font-weight:800;box-shadow:0 4px 12px #0001}
-form{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:28px;max-width:800px;margin:auto;box-shadow:var(--shadow)}
-label{font-weight:800;display:block;margin:13px 0 6px}
-input,select,textarea{width:100%;padding:12px;border:1px solid #b8aa92;border-radius:8px;font:inherit}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.order-row{display:grid;grid-template-columns:1fr 110px;gap:12px;align-items:center;margin:10px 0}
-.total{font-size:1.3rem;font-weight:900;margin-top:18px;padding-top:15px;border-top:2px solid var(--line)}
-footer{background:var(--ink);color:#fff;text-align:center;padding:28px;margin-top:20px}
-@media(max-width:650px){.grid{grid-template-columns:1fr}.hero{padding:25px 18px}}
-
-/* Just a little ranch-house polish — no layout/content changes */
-body{background:radial-gradient(circle at 20% 0%,#fffdf6 0,transparent 34%),radial-gradient(circle at 100% 20%,#e7ddc9 0,transparent 28%),var(--cream)}
-.wrap{position:relative}
-header{position:relative}
-header:after{content:"✦  2ND CHANCE RANCH  ✦";display:block;margin:8px auto 0;color:var(--gold);font-size:.72rem;letter-spacing:4px;font-weight:800;opacity:.9}
-.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--green) 0%,#314b2f 55%,#182719 100%)}
-.hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.13);border-radius:50%;pointer-events:none}
-.hero:before{width:280px;height:280px;right:-110px;top:-150px}
-.hero:after{width:190px;height:190px;left:-90px;bottom:-120px}
+:root{--ink:#211b16;--green:#203b28;--green2:#31543a;--cream:#f4ecdc;--paper:#fffaf0;--gold:#c49a52;--gold2:#e0bd79;--brown:#6b472b;--red:#8e382d;--line:#d7c7a8;--shadow:0 16px 40px rgba(34,27,18,.15)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6;background:var(--cream);background-image:radial-gradient(circle at 10% 10%,rgba(255,255,255,.8),transparent 28%),radial-gradient(circle at 90% 20%,rgba(196,154,82,.13),transparent 30%)}
+.wrap{max-width:1180px;margin:auto;padding:0 22px}
+header{text-align:center;padding:24px 0 18px}
+.logo{width:min(610px,100%);max-height:330px;object-fit:contain;filter:drop-shadow(0 8px 10px rgba(0,0,0,.12))}
+.tag{display:inline-block;font-weight:800;letter-spacing:2.5px;color:var(--green);font-size:.85rem;margin:4px 4px;padding:7px 13px;border:1px solid rgba(196,154,82,.55);border-radius:999px;background:rgba(255,250,240,.65)}
+.hero{position:relative;overflow:hidden;margin:8px 0 0;min-height:390px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;border-radius:0 0 30px 30px;padding:64px 28px;background:linear-gradient(135deg,rgba(24,47,31,.98),rgba(49,84,58,.93) 58%,rgba(105,76,43,.9));box-shadow:var(--shadow);border-top:4px solid var(--gold)}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.2));pointer-events:none}
+.hero:after{content:"✦";position:absolute;right:8%;top:15%;font-size:8rem;color:rgba(224,189,121,.12);line-height:1}
 .hero>*{position:relative;z-index:1}
-.section-title:after{content:"";display:block;width:58px;height:3px;background:var(--gold);margin:10px auto 0;border-radius:99px}
-.card,.flavor,form{position:relative;overflow:hidden}
-.card:before,.flavor:before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--gold),transparent)}
-.btn{box-shadow:0 5px 14px #0002}
-footer{position:relative}
-footer:before{content:"✦  ✦  ✦";display:block;color:var(--gold);letter-spacing:7px;margin-bottom:8px;font-size:.8rem}
+.hero h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.2rem,6vw,4.5rem);line-height:1.05;letter-spacing:.5px;margin:0 0 16px;text-shadow:0 3px 15px rgba(0,0,0,.35)}
+.hero p{font-size:clamp(1rem,2vw,1.2rem);max-width:760px;margin:0 auto 28px;color:#f8f0df}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1e1811;text-decoration:none;font-weight:900;letter-spacing:1px;padding:14px 23px;border-radius:10px;margin:5px;box-shadow:0 8px 20px rgba(0,0,0,.22);transition:.18s transform,.18s box-shadow;border:1px solid rgba(255,255,255,.25)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 25px rgba(0,0,0,.28)}
+section{padding:62px 0}
+section:nth-of-type(even){margin-left:calc((1180px - 100vw)/2);margin-right:calc((1180px - 100vw)/2);padding-left:max(22px,calc((100vw - 1180px)/2 + 22px));padding-right:max(22px,calc((100vw - 1180px)/2 + 22px));background:rgba(32,59,40,.055)}
+h2.section-title{font-family:Georgia,'Times New Roman',serif;text-align:center;font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin:0 0 34px;color:var(--green)}
+h2.section-title:after{content:"";display:block;width:70px;height:4px;background:var(--gold);margin:14px auto 0;border-radius:99px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:22px}
+.card{position:relative;overflow:hidden;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:27px;box-shadow:0 8px 22px rgba(34,27,18,.08);transition:.18s transform,.18s box-shadow}
+.card:before{content:"";position:absolute;left:0;top:0;width:100%;height:5px;background:linear-gradient(90deg,var(--gold),var(--green),transparent)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card h3{font-family:Georgia,'Times New Roman',serif;margin:0 0 8px;color:var(--brown);font-size:1.5rem}
+.card p{margin:7px 0}
+.price{font-size:1.55rem;font-weight:900;color:var(--red)}
+.flavors{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:13px;max-width:950px;margin:auto}
+.flavor{background:var(--paper);border:1px solid var(--line);border-left:6px solid var(--gold);padding:16px 18px;border-radius:12px;font-weight:800;box-shadow:0 5px 15px rgba(34,27,18,.07)}
+form{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px;max-width:850px;margin:auto;box-shadow:var(--shadow)}
+form:before{content:"2ND CHANCE RANCH • ORDER FORM";display:block;text-align:center;font-size:.78rem;font-weight:900;letter-spacing:3px;color:var(--gold);margin-bottom:18px}
+label{font-weight:900;display:block;margin:14px 0 6px;color:var(--green)}
+input,select,textarea{width:100%;padding:12px 13px;border:1px solid #c8b999;border-radius:9px;font:inherit;background:#fffdf7;color:var(--ink);outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(196,154,82,.16)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.order-row{display:grid;grid-template-columns:1fr 110px;gap:12px;align-items:center;margin:10px 0;padding:10px 12px;border:1px solid #eadfc9;border-radius:10px;background:#fffdf8}
+.order-row span{font-weight:700}
+.total{font-size:1.35rem;font-weight:900;margin-top:20px;padding:17px 0;border-top:2px solid var(--gold);border-bottom:1px solid var(--line);color:var(--green)}
+#message{min-height:24px;color:var(--red)}
+footer{background:var(--ink);color:#fff;text-align:center;padding:38px 22px;margin:0 -22px;border-top:5px solid var(--gold)}
+footer:before{content:"✦  FARM • FAMILY • FREEDOM  ✦";display:block;color:var(--gold2);letter-spacing:3px;margin-bottom:10px;font-size:.8rem;font-weight:900}
+footer strong{font-family:Georgia,serif;letter-spacing:2px;font-size:1.2rem}
+@media(max-width:650px){.wrap{padding:0 14px}.grid{grid-template-columns:1fr}.hero{min-height:340px;padding:48px 18px;border-radius:0 0 22px 22px}.hero h2{font-size:2.4rem}.card{padding:22px}.order-row{grid-template-columns:1fr 90px}section{padding:45px 0}form{padding:22px}footer{margin:0 -14px}}
 </style>
 </head>
 <body>
@@ -206,7 +209,6 @@ function orderSummary(){
   });
   const bq=Math.max(0,Math.floor(Number(broilerQty.value)||0));
   const bw=Math.max(0,Number(broilerWeight.value)||0);
-  const qb=Math.max(0,Math.floor(Number(document.getElementById('quailBroilerQty').value)||0));
   if(bq) parts.push('Chicken Broilers: '+bq+' at '+bw.toFixed(1)+' lb each');
   const sq=Math.max(0,Math.floor(Number(document.getElementById('shirtQty').value)||0));
   const sc=document.getElementById('shirtColor').value;
@@ -257,7 +259,17 @@ shirtQty.addEventListener('input',calc);
 shirtColor.addEventListener('change',calc);
 shirtSize.addEventListener('change',updateShirtLimit);
 
+function normalizePhone(value){
+  const digits=String(value||'').replace(/\D/g,'');
+  if(digits.length===10) return '1'+digits;
+  if(digits.length===11 && digits.startsWith('1')) return digits;
+  return String(value||'').trim();
+}
+const phoneInput=document.getElementById('phone');
+phoneInput.addEventListener('blur',()=>{ if(phoneInput.value.trim()) phoneInput.value=normalizePhone(phoneInput.value); });
+
 async function handleSubmit(event){
+  phoneInput.value=normalizePhone(phoneInput.value);
   calc();
   const payment=document.getElementById('payment').value;
   const total=Number(document.getElementById('total').textContent)||0;
@@ -294,7 +306,7 @@ async function handleSubmit(event){
 
   const payload={
     name:document.getElementById('name').value.trim(),
-    phone:document.getElementById('phone').value.trim(),
+    phone:phoneInput.value.trim(),
     notes:document.getElementById('notes').value.trim(),
     items:squareItems()
   };
