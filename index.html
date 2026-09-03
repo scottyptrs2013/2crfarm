@@ -14,14 +14,14 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6;background:var(--cream)}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.32;background:radial-gradient(circle at 12% 5%,#fff 0,transparent 28%),radial-gradient(circle at 90% 25%,rgba(196,154,82,.12),transparent 30%);z-index:-1}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.45;background:radial-gradient(circle at 10% 0%,#fff 0,transparent 30%),radial-gradient(circle at 95% 20%,rgba(196,154,82,.13),transparent 28%);z-index:-1}
 .wrap{max-width:1180px;margin:auto;padding:0 22px}
-header{text-align:center;padding:20px 0 24px}
-.logo{display:block;width:min(650px,100%);max-height:390px;object-fit:contain;margin:0 auto;filter:drop-shadow(0 8px 12px rgba(0,0,0,.13))}
-.tag{display:inline-block;font-weight:900;letter-spacing:2.8px;color:var(--green);font-size:.82rem;margin:5px 3px;padding:8px 15px;border:1px solid rgba(196,154,82,.55);border-radius:999px;background:rgba(255,250,240,.72)}
-.hero{position:relative;overflow:hidden;margin:0;border-top:5px solid var(--gold);border-radius:0 0 30px 30px;min-height:330px;padding:48px 52px;display:grid;grid-template-columns:minmax(230px,1fr) minmax(300px,1.55fr) auto;gap:34px;align-items:center;color:#fff;background:linear-gradient(120deg,var(--green-dark),var(--green) 52%,#405a3a);box-shadow:var(--shadow)}
+header{text-align:center;padding:22px 0 28px}
+.logo{display:block;width:min(650px,100%);max-height:410px;object-fit:contain;margin:0 auto;filter:drop-shadow(0 9px 14px rgba(0,0,0,.14))}
+.tag{display:inline-block;font-weight:900;letter-spacing:2.8px;color:var(--green);font-size:.82rem;margin:7px 3px 0;padding:9px 17px;border:1px solid rgba(196,154,82,.55);border-radius:999px;background:rgba(255,250,240,.78)}
+.hero{position:relative;overflow:hidden;margin:0;border-top:5px solid var(--gold);border-radius:0 0 30px 30px;min-height:330px;padding:48px 52px;display:grid;grid-template-columns:minmax(220px,1fr) minmax(300px,1.55fr) auto;gap:34px;align-items:center;color:#fff;background:linear-gradient(120deg,var(--green-dark),var(--green) 52%,#405a3a);box-shadow:var(--shadow)}
 .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 25%,rgba(224,189,121,.16),transparent 25%),linear-gradient(90deg,rgba(0,0,0,.1),transparent 45%,rgba(196,154,82,.08));pointer-events:none}
-.hero:after{content:"✦";position:absolute;right:5%;bottom:-34px;font-size:12rem;line-height:1;color:rgba(224,189,121,.09);pointer-events:none}
+.hero:after{content:"✦";position:absolute;right:4%;bottom:-42px;font-size:12rem;line-height:1;color:rgba(224,189,121,.09);pointer-events:none}
 .hero>*{position:relative;z-index:1}
 .hero h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.2rem,4vw,4rem);line-height:1.03;margin:0;color:#fff;text-shadow:0 3px 12px rgba(0,0,0,.25)}
 .hero p{font-size:1.08rem;max-width:650px;margin:0;color:#f8f0df}
@@ -32,13 +32,13 @@ section{padding:62px 0}
 section:nth-of-type(even){margin-left:calc((1180px - 100vw)/2);margin-right:calc((1180px - 100vw)/2);padding-left:max(22px,calc((100vw - 1180px)/2 + 22px));padding-right:max(22px,calc((100vw - 1180px)/2 + 22px));background:rgba(32,59,40,.045)}
 h2.section-title{font-family:Georgia,'Times New Roman',serif;text-align:center;font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin:0 0 36px;color:var(--green)}
 h2.section-title:after{content:"";display:block;width:72px;height:4px;background:var(--gold);margin:14px auto 0;border-radius:99px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:22px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
 .card{position:relative;overflow:hidden;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:27px;box-shadow:0 8px 22px rgba(34,27,18,.08);transition:.18s transform,.18s box-shadow}
 .card:before{content:"";position:absolute;left:0;top:0;width:100%;height:5px;background:linear-gradient(90deg,var(--gold),var(--green),transparent)}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .card h3{font-family:Georgia,'Times New Roman',serif;margin:0 0 8px;color:var(--brown);font-size:1.5rem;line-height:1.2}
 .card p{margin:7px 0}.price{font-size:1.55rem;font-weight:900;color:var(--red)}
-.flavors{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:13px;max-width:950px;margin:auto}
+.flavors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;max-width:950px;margin:auto}
 .flavor{position:relative;overflow:hidden;background:var(--paper);border:1px solid var(--line);border-left:6px solid var(--gold);padding:16px 18px;border-radius:12px;font-weight:800;box-shadow:0 5px 15px rgba(34,27,18,.07)}
 form{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px;max-width:850px;margin:auto;box-shadow:var(--shadow)}
 form:before{content:"2ND CHANCE RANCH • ORDER FORM";display:block;text-align:center;font-size:.78rem;font-weight:900;letter-spacing:3px;color:var(--gold);margin-bottom:18px}
@@ -58,6 +58,35 @@ footer strong{font-family:Georgia,serif;letter-spacing:2px;font-size:1.2rem}
 @media(max-width:560px){
   header{padding:14px 0 18px}.logo{max-height:330px}.tag{font-size:.72rem;letter-spacing:2px;padding:7px 11px}.hero{padding:36px 20px}.hero h2{font-size:2.35rem}.hero p{font-size:1rem}.cards{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.order-row{grid-template-columns:1fr 82px}form{padding:22px}.flavors{grid-template-columns:1fr}section:nth-of-type(even){margin-left:-14px;margin-right:-14px;padding-left:14px;padding-right:14px}
 }
+
+/* === CLEAN PREMIUM RANCH LANDING PAGE === */
+body{background:#f2ecdf;overflow-x:hidden}
+body:before{opacity:.45}
+header{position:relative;width:100vw;margin-left:calc((1180px - 100vw)/2);padding:72px 22px 26px;background:linear-gradient(180deg,#14271a 0%,#203b28 100%);border-bottom:4px solid var(--gold);box-shadow:0 10px 28px rgba(20,27,19,.22);z-index:2;text-align:center}
+header:before{content:"🐔  FARM FRESH  •  COUNTRY MADE  •  VETERAN OWNED & OPERATED";position:absolute;left:0;right:0;top:0;min-height:42px;display:flex;align-items:center;justify-content:center;padding:8px 16px;background:#1b3723;color:#f7f0df;font-size:.76rem;font-weight:900;letter-spacing:1.6px;text-align:center;box-shadow:0 2px 0 rgba(196,154,82,.35)}
+.logo{display:block;width:min(500px,92vw);max-height:330px;object-fit:contain;margin:0 auto;filter:drop-shadow(0 12px 18px rgba(0,0,0,.38))}
+.tag{color:#f5efe3;background:transparent;border:0;box-shadow:none;margin:7px 3px 0;padding:7px 9px;font-size:.72rem;letter-spacing:1.8px}
+.hero{position:relative;width:100vw;margin-left:calc((1180px - 100vw)/2);min-height:590px;padding:72px max(7vw,28px) 78px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:20px;border:0;border-radius:0;overflow:hidden;color:#fff;background:linear-gradient(105deg,#14291b 0%,#203b28 55%,#344c35 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),inset 0 -70px 100px rgba(0,0,0,.16)}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 18%,rgba(224,189,121,.13),transparent 25%),linear-gradient(120deg,transparent 0 58%,rgba(224,189,121,.045) 58% 59%,transparent 59%);pointer-events:none}
+.hero:after{content:"2CR";position:absolute;right:3vw;bottom:-75px;font-family:Georgia,'Times New Roman',serif;font-size:20rem;font-weight:900;line-height:1;color:rgba(224,189,121,.045);letter-spacing:-.08em;pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.hero h2{max-width:800px;font-family:Georgia,'Times New Roman',serif;font-size:clamp(3.2rem,8vw,7rem);line-height:.93;letter-spacing:-2px;margin:0;color:#fff;text-shadow:0 5px 18px rgba(0,0,0,.42)}
+.hero h2:after{content:"";display:block;width:92px;height:5px;margin:24px 0 0;border-radius:99px;background:linear-gradient(90deg,var(--gold-light),var(--gold))}
+.hero p{max-width:700px;font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.65;color:#f7f0df;margin:0}
+.hero .btn{margin:5px 8px 0 0;padding:15px 25px;border-radius:9px;font-size:.92rem;letter-spacing:1px}
+.hero .btn[href="#order"]{background:linear-gradient(135deg,var(--gold-light),var(--gold));box-shadow:0 10px 26px rgba(0,0,0,.28)}
+@media(max-width:700px){
+ header{width:calc(100vw + 28px);margin-left:-14px;padding:58px 12px 22px}
+ header:before{font-size:.64rem;letter-spacing:.8px;line-height:1.2}
+ .logo{width:min(355px,94vw);max-height:285px}
+ .tag{font-size:.63rem;letter-spacing:1.1px;padding:5px 5px}
+ .hero{width:calc(100vw + 28px);margin-left:-14px;min-height:590px;padding:55px 28px 65px;justify-content:flex-end}
+ .hero h2{font-size:clamp(3rem,14vw,4.6rem);letter-spacing:-1px}
+ .hero p{font-size:1.03rem;line-height:1.55}
+ .hero .btn{padding:14px 18px;margin-right:5px}
+ .hero:after{font-size:11rem;right:-15px;bottom:-25px}
+}
+
 </style>
 </head>
 <body>
@@ -68,9 +97,9 @@ footer strong{font-family:Georgia,serif;letter-spacing:2px;font-size:1.2rem}
 </header>
 
 <div class="hero">
-<h2>Welcome to 2nd Chance Ranch</h2>
-<p>Veteran owned and operated, 2nd Chance Ranch brings you farm-raised goodness, small-batch products, and a whole lot of country flavor.</p>
-<a class="btn" href="#order">ORDER FROM THE RANCH</a>
+<h2>Good food.<br>Good people.<br>Good country<br>living.</h2>
+<p>We raise it, make it, and put a whole lot of pride into it right here at the ranch.</p>
+<div><a class="btn" href="#order">SHOP THE RANCH</a><a class="btn" href="#order" style="background:transparent;color:#fff;border:2px solid rgba(255,255,255,.9);box-shadow:none">HOW TO ORDER</a></div>
 </div>
 
 <section>
@@ -112,11 +141,12 @@ footer strong{font-family:Georgia,serif;letter-spacing:2px;font-size:1.2rem}
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_next" value="https://2crfarm.com/?order=received">
 <input type="hidden" id="total_jars" name="Total Jars" value="0">
+<input type="hidden" id="total_items" name="Total Items" value="0">
 <input type="hidden" id="order_total" name="Order Total" value="$0.00">
 <input type="hidden" id="order_summary" name="Order Summary" value="">
 <div class="grid">
 <div><label>Name</label><input id="name" name="Customer Name" required></div>
-<div><label>Phone</label><input id="phone" name="Phone" required></div>
+<div><label>Phone</label><input id="phone" type="tel" inputmode="tel" autocomplete="tel" name="Phone" required></div>
 </div>
 
 <label>Pickles</label>
@@ -125,7 +155,7 @@ footer strong{font-family:Georgia,serif;letter-spacing:2px;font-size:1.2rem}
 <div class="order-row"><span>The Tipsy Rancher — $8/jar</span><input type="number" min="0" value="0" name="The Tipsy Rancher" data-price="8" data-kind="jars"></div>
 
 <label>Pickled Egg Flavors — $15/jar</label>
-<div class="order-row"><span>Sully\'s Signature</span><input type="number" min="0" value="0" name="Sully\'s Signature" data-price="15" data-kind="jars"></div>
+<div class="order-row"><span>Sully's Signature</span><input type="number" min="0" value="0" name="Sully's Signature" data-price="15" data-kind="jars"></div>
 <div class="order-row"><span>Sweet Thai Chili</span><input type="number" min="0" value="0" name="Sweet Thai Chili" data-price="15" data-kind="jars"></div>
 <div class="order-row"><span>Mexican</span><input type="number" min="0" value="0" name="Mexican" data-price="15" data-kind="jars"></div>
 <div class="order-row"><span>Molé</span><input type="number" min="0" value="0" name="Molé" data-price="15" data-kind="jars"></div>
@@ -143,7 +173,7 @@ footer strong{font-family:Georgia,serif;letter-spacing:2px;font-size:1.2rem}
 <p style="margin:6px 0 14px;color:#6d4c2f;font-weight:700">Broiler price is calculated at $5/lb, with a maximum of $25 per bird.</p>
 
 <label>2nd Chance Ranch T-Shirts — $25 each</label>
-<p style="margin:6px 0 14px;color:#6d4c2f;font-weight:700">Veteran owned &amp; operated. Army Green or Sand. Current inventory: Small 1 • Medium 2 • Large 1 • XL 2 • 2XL 1.</p>
+<p style="margin:6px 0 14px;color:#6d4c2f;font-weight:700">Veteran owned &amp; operated. Army Green or Sand. Current inventory: Small 1 • Medium 2 • Large 1 • XL 2 • 2XL 1. Total: 7 shirts.</p>
 <div class="grid">
 <div><label>Color</label><select id="shirtColor" name="T-Shirt Color">
 <option value="">Select color</option>
@@ -170,7 +200,7 @@ footer strong{font-family:Georgia,serif;letter-spacing:2px;font-size:1.2rem}
 <option value="square">Pay Online with Square</option>
 </select>
 
-<div class="total">Total Jars: <span id="jars">0</span> &nbsp; | &nbsp; Total: $<span id="total">0.00</span></div>
+<div class="total">Total Jars: <span id="jars">0</span> &nbsp; | &nbsp; Total Items: <span id="items">0</span> &nbsp; | &nbsp; Total: $<span id="total">0.00</span></div>
 <button id="submitButton" class="btn" type="submit" style="border:0;cursor:pointer;margin-top:18px">SUBMIT ORDER</button>
 <p id="message" style="font-weight:800"></p>
 </form>
@@ -195,16 +225,24 @@ function shirtTotal(){
 
 function calc(){
   let jars=0,total=broilerTotal()+shirtTotal();
+  let itemCount=0;
   const qb=Math.max(0,Math.floor(Number(document.getElementById('quailBroilerQty').value)||0));
   total+=qb*30;
+  itemCount+=qb;
   inputs.forEach(i=>{
     const q=Math.max(0,Math.floor(Number(i.value)||0));
     jars+=q;
+    itemCount+=q;
     total+=q*Number(i.dataset.price);
   });
+  const bq=Math.max(0,Math.floor(Number(broilerQty.value)||0));
+  const sq=Math.max(0,Math.floor(Number(document.getElementById('shirtQty').value)||0));
+  itemCount+=bq+sq;
   document.getElementById('jars').textContent=jars;
+  document.getElementById('items').textContent=itemCount;
   document.getElementById('total').textContent=total.toFixed(2);
   document.getElementById('total_jars').value=jars;
+  document.getElementById('total_items').value=itemCount;
   document.getElementById('order_total').value='$'+total.toFixed(2);
   return total;
 }
@@ -261,6 +299,7 @@ function updateShirtLimit(){
 }
 
 inputs.forEach(i=>i.addEventListener('input',calc));
+inputs.forEach(i=>i.addEventListener('change',calc));
 broilerQty.addEventListener('input',calc);
 broilerWeight.addEventListener('input',calc);
 const quailBroilerQty=document.getElementById('quailBroilerQty');
@@ -275,9 +314,14 @@ function normalizePhone(value){
   if(digits.length===11 && digits.startsWith('1')) return digits;
   return String(value||'').trim();
 }
+
 const phoneInput=document.getElementById('phone');
 phoneInput.addEventListener('blur',()=>{ if(phoneInput.value.trim()) phoneInput.value=normalizePhone(phoneInput.value); });
 phoneInput.addEventListener('change',()=>{ if(phoneInput.value.trim()) phoneInput.value=normalizePhone(phoneInput.value); });
+phoneInput.addEventListener('input',()=>{
+  const digits=phoneInput.value.replace(/\D/g,'');
+  if(digits.length===10 || (digits.length===11 && digits.startsWith('1'))) phoneInput.value=normalizePhone(phoneInput.value);
+});
 
 async function handleSubmit(event){
   phoneInput.value=normalizePhone(phoneInput.value);
@@ -317,7 +361,7 @@ async function handleSubmit(event){
 
   const payload={
     name:document.getElementById('name').value.trim(),
-    phone:phoneInput.value.trim(),
+    phone:document.getElementById('phone').value.trim(),
     notes:document.getElementById('notes').value.trim(),
     items:squareItems()
   };
@@ -339,6 +383,7 @@ async function handleSubmit(event){
 }
 
 updateShirtLimit();
+calc();
 </script>
 </body>
 </html>
