@@ -1,17 +1,41 @@
 const SQUARE_API = "https://connect.squareup.com/v2/online-checkout/payment-links";
 const SQUARE_VERSION = "2026-08-19";
 
+
 const PRICES = {
   "Ranchhouse Pickles": 800,
   "Garlic Dill Pickles": 800,
   "The Tipsy Rancher": 800,
+  "Hellfire Pickles": 800,
+  "Ranchhand Mary Pickles — Mild": 800,
+  "Ranchhand Mary Pickles — Spicy": 800,
   "Sully's Signature": 1500,
   "Sweet Thai Chili": 1500,
   "Mexican": 1500,
   "Molé": 1500,
   "Cowboy Butter": 1500,
-  "Cajun": 1500
+  "Cajun": 1500,
+  "Sweet Beet Eggs": 1500,
+  "Ranchhand Mary Pickled Quail Eggs — Mild": 1500,
+  "Ranchhand Mary Pickled Quail Eggs — Spicy": 1500,
+  "2CR Ranchero Salsa": 800,
+  "Tropical Heat Salsa": 800,
+  "Pickle Stampede": 800,
+  "Smoked Colby Cheese": 1000,
+  "Smoked Pepper Jack Cheese": 1000,
+  "Gouda Cheese": 1000,
+  "Sharp Cheddar Cheese": 1000,
+  "Rancher Sausage": 1800,
+  "Jalapeño Cheddar Summer Sausage": 1800,
+  "Pepper Jack Summer Sausage": 1800,
+  "Triple Threat Summer Sausage": 1800,
+  "Backroad Apple Candle": 1500,
+  "Blueberry Muffin Candle": 1500,
+  "Pumpkin Pie Candle": 1500,
+  "Quail Broilers": 3000,
+  "2CR T-Shirt": 2500
 };
+
 
 function json(data, status = 200) {
   return new Response(JSON.stringify(data), {
