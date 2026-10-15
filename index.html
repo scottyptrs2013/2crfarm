@@ -5,29 +5,88 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>2nd Chance Ranch | Farm Fresh & Small Batch</title>
 <style>
-:root{--ink:#201b17;--brown:#6d4c2f;--cream:#f5efe3;--gold:#b58a4a;--line:#cbbda5}
-*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
-.wrap{max-width:1050px;margin:auto;padding:22px}header{text-align:center;padding:8px 0 18px}
-.logo{width:min(720px,100%);max-height:390px;object-fit:contain}
-.tag{font-weight:700;letter-spacing:3px;color:var(--brown)}
-.hero{background:#201b17;color:#fff;border-radius:18px;padding:34px;text-align:center;box-shadow:0 8px 25px #0002}
-.hero h2{font-family:Georgia,serif;font-size:clamp(1.8rem,4vw,3rem);margin:0 0 10px}
-.hero p{font-size:1.1rem;line-height:1.6;max-width:700px;margin:0 auto 22px}
-.btn{display:inline-block;background:var(--gold);color:#fff;text-decoration:none;font-weight:800;padding:14px 22px;border-radius:9px;margin:5px}
-section{padding:38px 0}h2.section-title{font-family:Georgia,serif;text-align:center;font-size:2rem;margin:0 0 24px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
-.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:0 4px 14px #00000010}
-.card h3{font-family:Georgia,serif;margin-top:0;color:var(--brown)}.price{font-size:1.5rem;font-weight:900}
-.flavors{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
-.flavor{background:#fff;border-left:5px solid var(--gold);padding:14px;border-radius:8px;font-weight:800}
-form{background:#fff;border:1px solid var(--line);border-radius:16px;padding:25px;max-width:760px;margin:auto}
-label{font-weight:800;display:block;margin:13px 0 6px}
-input,select,textarea{width:100%;padding:12px;border:1px solid #b8aa92;border-radius:8px;font:inherit}
+:root{
+  --ink:#211b16;--green:#203b28;--green-dark:#16291c;--green2:#31543a;
+  --cream:#f5efe3;--paper:#fffaf0;--gold:#c49a52;--gold-light:#e0bd79;
+  --brown:#6b472b;--red:#8e382d;--line:#d8c8a8;
+  --shadow:0 14px 36px rgba(34,27,18,.13)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6;background:var(--cream)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.45;background:radial-gradient(circle at 10% 0%,#fff 0,transparent 30%),radial-gradient(circle at 95% 20%,rgba(196,154,82,.13),transparent 28%);z-index:-1}
+.wrap{max-width:1180px;margin:auto;padding:0 22px}
+header{text-align:center;padding:22px 0 28px}
+.logo{display:block;width:min(650px,100%);max-height:410px;object-fit:contain;margin:0 auto;filter:drop-shadow(0 9px 14px rgba(0,0,0,.14))}
+.tag{display:inline-block;font-weight:900;letter-spacing:2.8px;color:var(--green);font-size:.82rem;margin:7px 3px 0;padding:9px 17px;border:1px solid rgba(196,154,82,.55);border-radius:999px;background:rgba(255,250,240,.78)}
+.hero{position:relative;overflow:hidden;margin:0;border-top:5px solid var(--gold);border-radius:0 0 30px 30px;min-height:330px;padding:48px 52px;display:grid;grid-template-columns:minmax(220px,1fr) minmax(300px,1.55fr) auto;gap:34px;align-items:center;color:#fff;background:linear-gradient(120deg,var(--green-dark),var(--green) 52%,#405a3a);box-shadow:var(--shadow)}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 25%,rgba(224,189,121,.16),transparent 25%),linear-gradient(90deg,rgba(0,0,0,.1),transparent 45%,rgba(196,154,82,.08));pointer-events:none}
+.hero:after{content:"✦";position:absolute;right:4%;bottom:-42px;font-size:12rem;line-height:1;color:rgba(224,189,121,.09);pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.hero h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.2rem,4vw,4rem);line-height:1.03;margin:0;color:#fff;text-shadow:0 3px 12px rgba(0,0,0,.25)}
+.hero p{font-size:1.08rem;max-width:650px;margin:0;color:#f8f0df}
+.hero .btn{justify-self:center;max-width:190px;text-align:center}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#1e1811;text-decoration:none;font-weight:900;letter-spacing:1px;padding:14px 23px;border-radius:10px;margin:5px;box-shadow:0 8px 20px rgba(0,0,0,.22);transition:.18s transform,.18s box-shadow;border:1px solid rgba(255,255,255,.25)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 25px rgba(0,0,0,.28)}
+section{padding:62px 0}
+section:nth-of-type(even){margin-left:calc((1180px - 100vw)/2);margin-right:calc((1180px - 100vw)/2);padding-left:max(22px,calc((100vw - 1180px)/2 + 22px));padding-right:max(22px,calc((100vw - 1180px)/2 + 22px));background:rgba(32,59,40,.045)}
+h2.section-title{font-family:Georgia,'Times New Roman',serif;text-align:center;font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin:0 0 36px;color:var(--green)}
+h2.section-title:after{content:"";display:block;width:72px;height:4px;background:var(--gold);margin:14px auto 0;border-radius:99px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.card{position:relative;overflow:hidden;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:27px;box-shadow:0 8px 22px rgba(34,27,18,.08);transition:.18s transform,.18s box-shadow}
+.card:before{content:"";position:absolute;left:0;top:0;width:100%;height:5px;background:linear-gradient(90deg,var(--gold),var(--green),transparent)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card h3{font-family:Georgia,'Times New Roman',serif;margin:0 0 8px;color:var(--brown);font-size:1.5rem;line-height:1.2}
+.card p{margin:7px 0}.price{font-size:1.55rem;font-weight:900;color:var(--red)}
+.flavors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;max-width:950px;margin:auto}
+.flavor{position:relative;overflow:hidden;background:var(--paper);border:1px solid var(--line);border-left:6px solid var(--gold);padding:16px 18px;border-radius:12px;font-weight:800;box-shadow:0 5px 15px rgba(34,27,18,.07)}
+form{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px;max-width:850px;margin:auto;box-shadow:var(--shadow)}
+form:before{content:"2ND CHANCE RANCH • ORDER FORM";display:block;text-align:center;font-size:.78rem;font-weight:900;letter-spacing:3px;color:var(--gold);margin-bottom:18px}
+label{font-weight:900;display:block;margin:14px 0 6px;color:var(--green)}
+input,select,textarea{width:100%;padding:12px 13px;border:1px solid #c8b999;border-radius:9px;font:inherit;background:#fffdf7;color:var(--ink);outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(196,154,82,.16)}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.order-row{display:grid;grid-template-columns:1fr 110px;gap:12px;align-items:center;margin:10px 0}
-.total{font-size:1.3rem;font-weight:900;margin-top:18px;padding-top:15px;border-top:2px solid var(--line)}
-footer{background:var(--ink);color:#fff;text-align:center;padding:28px;margin-top:20px}
-@media(max-width:650px){.grid{grid-template-columns:1fr}.hero{padding:25px 18px}}
+.order-row{display:grid;grid-template-columns:1fr 110px;gap:12px;align-items:center;margin:10px 0;padding:10px 12px;border:1px solid #eadfc9;border-radius:10px;background:#fffdf8}
+.order-row span{font-weight:700}.total{font-size:1.35rem;font-weight:900;margin-top:20px;padding:17px 0;border-top:2px solid var(--gold);border-bottom:1px solid var(--line);color:var(--green)}
+#message{min-height:24px;color:var(--red)}
+footer{background:var(--ink);color:#fff;text-align:center;padding:38px 22px;margin:0 -22px;border-top:5px solid var(--gold)}
+footer:before{content:"✦  FARM • FAMILY • FREEDOM  ✦";display:block;color:var(--gold-light);letter-spacing:3px;margin-bottom:10px;font-size:.8rem;font-weight:900}
+footer strong{font-family:Georgia,serif;letter-spacing:2px;font-size:1.2rem}
+@media(max-width:800px){
+  .wrap{padding:0 14px}.hero{grid-template-columns:1fr;gap:18px;min-height:0;padding:42px 26px;text-align:center;border-radius:0 0 24px 24px}.hero h2{font-size:2.7rem}.hero p{margin:auto}.hero .btn{justify-self:center}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}section{padding:48px 0}footer{margin:0 -14px}
+}
+@media(max-width:560px){
+  header{padding:14px 0 18px}.logo{max-height:330px}.tag{font-size:.72rem;letter-spacing:2px;padding:7px 11px}.hero{padding:36px 20px}.hero h2{font-size:2.35rem}.hero p{font-size:1rem}.cards{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.order-row{grid-template-columns:1fr 82px}form{padding:22px}.flavors{grid-template-columns:1fr}section:nth-of-type(even){margin-left:-14px;margin-right:-14px;padding-left:14px;padding-right:14px}
+}
+
+/* === CLEAN PREMIUM RANCH LANDING PAGE === */
+body{background:#f2ecdf;overflow-x:hidden}
+body:before{opacity:.45}
+header{position:relative;width:100vw;margin-left:calc((1180px - 100vw)/2);padding:72px 22px 26px;background:linear-gradient(180deg,#14271a 0%,#203b28 100%);border-bottom:4px solid var(--gold);box-shadow:0 10px 28px rgba(20,27,19,.22);z-index:2;text-align:center}
+header:before{content:"🐔  FARM FRESH  •  COUNTRY MADE  •  VETERAN OWNED & OPERATED";position:absolute;left:0;right:0;top:0;min-height:42px;display:flex;align-items:center;justify-content:center;padding:8px 16px;background:#1b3723;color:#f7f0df;font-size:.76rem;font-weight:900;letter-spacing:1.6px;text-align:center;box-shadow:0 2px 0 rgba(196,154,82,.35)}
+.logo{display:block;width:min(500px,92vw);max-height:330px;object-fit:contain;margin:0 auto;filter:drop-shadow(0 12px 18px rgba(0,0,0,.38))}
+.tag{color:#f5efe3;background:transparent;border:0;box-shadow:none;margin:7px 3px 0;padding:7px 9px;font-size:.72rem;letter-spacing:1.8px}
+.hero{position:relative;width:100vw;margin-left:calc((1180px - 100vw)/2);min-height:590px;padding:72px max(7vw,28px) 78px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:20px;border:0;border-radius:0;overflow:hidden;color:#fff;background:linear-gradient(105deg,#14291b 0%,#203b28 55%,#344c35 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),inset 0 -70px 100px rgba(0,0,0,.16)}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 18%,rgba(224,189,121,.13),transparent 25%),linear-gradient(120deg,transparent 0 58%,rgba(224,189,121,.045) 58% 59%,transparent 59%);pointer-events:none}
+.hero:after{content:"2CR";position:absolute;right:3vw;bottom:-75px;font-family:Georgia,'Times New Roman',serif;font-size:20rem;font-weight:900;line-height:1;color:rgba(224,189,121,.045);letter-spacing:-.08em;pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.hero h2{max-width:800px;font-family:Georgia,'Times New Roman',serif;font-size:clamp(3.2rem,8vw,7rem);line-height:.93;letter-spacing:-2px;margin:0;color:#fff;text-shadow:0 5px 18px rgba(0,0,0,.42)}
+.hero h2:after{content:"";display:block;width:92px;height:5px;margin:24px 0 0;border-radius:99px;background:linear-gradient(90deg,var(--gold-light),var(--gold))}
+.hero p{max-width:700px;font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.65;color:#f7f0df;margin:0}
+.hero .btn{margin:5px 8px 0 0;padding:15px 25px;border-radius:9px;font-size:.92rem;letter-spacing:1px}
+.hero .btn[href="#order"]{background:linear-gradient(135deg,var(--gold-light),var(--gold));box-shadow:0 10px 26px rgba(0,0,0,.28)}
+@media(max-width:700px){
+ header{width:calc(100vw + 28px);margin-left:-14px;padding:58px 12px 22px}
+ header:before{font-size:.64rem;letter-spacing:.8px;line-height:1.2}
+ .logo{width:min(355px,94vw);max-height:285px}
+ .tag{font-size:.63rem;letter-spacing:1.1px;padding:5px 5px}
+ .hero{width:calc(100vw + 28px);margin-left:-14px;min-height:590px;padding:55px 28px 65px;justify-content:flex-end}
+ .hero h2{font-size:clamp(3rem,14vw,4.6rem);letter-spacing:-1px}
+ .hero p{font-size:1.03rem;line-height:1.55}
+ .hero .btn{padding:14px 18px;margin-right:5px}
+ .hero:after{font-size:11rem;right:-15px;bottom:-25px}
+}
+
 </style>
 </head>
 <body>
@@ -38,10 +97,26 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px;margin-to
 </header>
 
 <div class="hero">
-<h2>Welcome to 2nd Chance Ranch</h2>
-<p>Veteran owned and operated, 2nd Chance Ranch brings you farm-raised goodness, small-batch products, and a whole lot of country flavor.</p>
-<a class="btn" href="#order">ORDER PICKLED EGGS</a>
+<h2>Good food.<br>Good people.<br>Good country<br>living.</h2>
+<p>We raise it, make it, and put a whole lot of pride into it right here at the ranch.</p>
+<div><a class="btn" href="#order">SHOP THE RANCH</a><a class="btn" href="#order" style="background:transparent;color:#fff;border:2px solid rgba(255,255,255,.9);box-shadow:none">HOW TO ORDER</a></div>
 </div>
+
+<section id="mission" aria-labelledby="mission-title" style="background:linear-gradient(135deg,rgba(28,54,39,.08),rgba(224,189,121,.12));border:1px solid rgba(128,105,62,.22);border-radius:18px;padding:clamp(24px,4vw,44px);margin-top:28px;margin-bottom:28px">
+<div style="max-width:900px;margin:0 auto;text-align:center">
+<p style="margin:0 0 10px;color:var(--gold);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:.82rem">The Heart of 2nd Chance Ranch</p>
+<h2 id="mission-title" class="section-title" style="margin-top:0;margin-bottom:12px">More than a ranch. A second chance at life.</h2>
+<p style="font-size:clamp(1.15rem,2.4vw,1.55rem);line-height:1.55;font-weight:700;color:var(--green,#254632);margin:0 auto 22px;max-width:780px">We grow food today to help build second chances for tomorrow.</p>
+<div style="text-align:left;max-width:820px;margin:0 auto;line-height:1.8">
+<p>At 2nd Chance Ranch, we believe everyone deserves the opportunity to rebuild, rediscover their purpose, and create a better future. We believe hard work has value, community matters, and a person's past does not have to define their future.</p>
+<p>We are a veteran-owned and operated farm built on the values of service, resilience, self-reliance, and helping others. Through our farm products and growing small business, we're working to build something bigger than ourselves.</p>
+<p>Our long-term vision is to create a place where veterans, individuals recovering from addiction, and people returning to their communities after incarceration can find support, structure, meaningful work, and a path forward. A place where people can learn practical skills, contribute to something worthwhile, grow their confidence, and begin rebuilding their lives one day at a time.</p>
+<p>We envision a community rooted in agriculture, personal accountability, compassion, and opportunity—a place where food is grown, skills are learned, friendships are built, and people are reminded that they still have something valuable to offer the world.</p>
+<p>We know that second chances don't erase the past. They create an opportunity to build something different from it.</p>
+<p style="font-weight:800;font-size:1.08rem;margin-bottom:0">Our mission is to grow more than food. It's to grow hope, restore purpose, and help people build a future worth fighting for.</p>
+</div>
+</div>
+</section>
 
 <section>
 <h2 class="section-title">What We Offer</h2>
@@ -49,50 +124,175 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px;margin-to
 <div class="card"><h3>Fresh Farm Eggs</h3><p>Fresh eggs from our birds, available locally while supplies last.</p><p><b>Chicken • Duck • Guinea • Quail</b></p></div>
 <div class="card"><h3>Pickled Quail Eggs</h3><p class="price">$15 / jar</p><p>Small-batch pickled quail eggs made right here at 2nd Chance Ranch.</p></div>
 <div class="card"><h3>Ranchhouse Pickles</h3><p class="price">$8 / jar</p><p>Crisp, small-batch pickles made right here at 2nd Chance Ranch.</p></div>
-<div class="card"><h3>Meat Chickens</h3><p>Farm-raised meat chickens available as our production allows.</p></div>
+<div class="card"><h3>Garlic Dill Pickles</h3><p class="price">$8 / jar</p><p>Classic garlic dill crunch, made right here at 2nd Chance Ranch.</p></div>
+<div class="card"><h3>Hellfire Pickles</h3><p class="price">$8 / jar</p><p>Not for the faint of heart! A fiery pickle with a serious kick for folks who like their crunch with some heat.</p></div>
+<div class="card"><h3>Ranchhand Mary Pickles</h3><p class="price">$8 / jar</p><p>Bloody Mary-inspired pickles with your choice of mild or spicy.</p></div>
+<div class="card"><h3>2CR Ranchero Salsa</h3><p class="price">$8 / jar</p><p>Our signature ranch-style salsa, bringing a little 2CR flavor to your table.</p></div>
+<div class="card"><h3>Tropical Heat Salsa</h3><p class="price">$8 / jar</p><p>A sweet-and-spicy blend of pineapple, tomatillos, jalapeños, serranos, colorful bell peppers, and smoky chipotle.</p></div>
+<div class="card"><h3>Pickle Stampede</h3><p class="price">$8 / jar</p><p>A tangy, pickle-inspired salsa bringing a bold, ranch-style twist to the 2CR lineup.</p></div>
+<div class="card"><h3>The Tipsy Rancher</h3><p class="price">$8 / jar</p><p>Our Bourbon Maple pickle with a little country attitude.</p></div>
+<div class="card"><h3>Chicken Broilers</h3><p class="price">$5 / lb • $25 max</p><p>Farm-raised broilers priced by weight, capped at $25 per bird.</p></div>
 <div class="card"><h3>Quail</h3><p>Farm-raised quail for eggs, meat, breeding, and more.</p></div>
-<div class="card"><h3>Heritage Pork</h3><p>Heritage pork raised right here at the ranch.</p></div>
+<div class="card"><h3>Heritage Kune Kune Pork</h3><p>Heritage pork raised right here at the ranch.</p></div>
+<div class="card"><h3>Quail Broilers</h3><p class="price">6 for $30</p><p>Farm-raised quail broilers, sold in packs of six.</p></div>
+<div class="card"><h3>2nd Chance Ranch T-Shirts</h3><p class="price">$25 each</p><p>Veteran owned &amp; operated. Available in Army Green and Sand.</p><p><b>7 shirts currently available</b></p></div>
+</div>
+</section>
+
+<section id="2cr-artisan-products">
+<h2 class="section-title">2CR Artisan Products</h2>
+<div class="cards">
+<div class="card"><h3>2CR Artisan Cheese</h3><p>Small-batch artisan cheese from 2CR, with bold flavors for your board, sandwich, or snack plate.</p><p class="price">$10 / 8 oz block</p><ul><li>Smoked Colby</li><li>Smoked Pepper Jack</li><li>Gouda</li><li>Sharp Cheddar</li></ul><p>Each 8 oz block is $10.</p></div>
+<div class="card"><h3>2CR Artisan Smokehouse — Heritage Summer Sausage</h3><p>Small-batch summer sausage made with heritage pork raised right here at 2nd Chance Ranch from our Kune Kune and Red Wattle hogs.</p><ul><li>Rancher Sausage — Original</li><li>Jalapeño Cheddar</li><li>Pepper Jack</li><li>Triple Threat — the three-way blend</li></ul><p class="price">$18 per 12 oz chub</p><p>Small-batch heritage summer sausage. Each variety is sold in a 12 oz chub.</p></div>
+</div>
+</section>
+
+<section id="hog-shares">
+<h2 class="section-title">2CR Hog Shares</h2>
+<div class="cards">
+<div class="card"><h3>Whole Hog Share</h3><p class="price">$350</p><p>Reserve one whole hog share through 2nd Chance Ranch.</p><p><b>Estimated market weight: approximately 250 lb live weight.</b></p><p>When the hog reaches market weight, 2CR will arrange delivery to Woods for processing. Kill/dispatch fees, processing charges, and any additional options are paid directly to Woods by the share holder.</p><a class="btn" href="#order">RESERVE A WHOLE HOG</a></div>
+<div class="card"><h3>Half Hog Share</h3><p class="price">$200</p><p>Reserve a half hog share through 2nd Chance Ranch.</p><p><b>$175 half-share + $25 convenience fee.</b></p><p>When the hog reaches market weight, 2CR will arrange delivery to Woods for processing. Kill/dispatch fees, processing charges, and any additional options are paid directly to Woods by the share holder.</p><a class="btn" href="#order">RESERVE A HALF HOG</a></div>
+</div>
+<div style="max-width:900px;margin:18px auto 0;padding:20px;background:rgba(255,250,240,.82);border:1px solid rgba(196,154,82,.35);border-radius:14px;text-align:center">
+<p style="margin:0 0 8px;font-weight:900;color:var(--green)">THE 2CR HOG-SHARE ROSTER</p>
+<p style="margin:0">Reserve your whole or half hog share now to hold your spot on the 2CR roster. We'll contact share holders with processing and pickup details as the hog reaches market weight.</p>
+</div>
+</section>
+
+<section id="tabbys-rustic-roots">
+<h2 class="section-title">Tabby's Rustic Roots</h2>
+<div class="cards">
+<div class="card"><img src="assets/tabbys-three-candles.png" alt="The three actual Tabby's Rustic Roots candles: Backroad Apple, Blueberry Muffin, and Pumpkin Pie in their jars" style="display:block;width:100%;height:auto;border-radius:12px;margin-bottom:16px"><h3>Hand-Poured Country Candles</h3><p>Handcrafted farmhouse candles made with love at 2nd Chance Ranch. Choose from Backroad Apple, Blueberry Muffin, or Pumpkin Pie.</p><p class="price">$15 each</p></div>
+<div class="card"><img src="assets/tabbys-rustic-roots-banner.png" alt="Tabby's Rustic Roots handcrafted farmhouse goods banner" style="display:block;width:100%;height:auto;border-radius:12px;margin-bottom:16px"><h3>Choose Your Scent</h3><p>Each candle comes in Tabby's signature rustic jar. Select your scent in the order form below.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><img src="assets/tabbys-backroad-apple.png" alt="Actual Backroad Apple candle jar" style="width:100%;height:auto;border-radius:8px"><img src="assets/tabbys-blueberry-muffin-label.jpg" alt="Blueberry Muffin candle label" style="width:100%;height:auto;border-radius:8px"><img src="assets/tabbys-pumpkin-pie-label.jpg" alt="Pumpkin Pie candle label" style="width:100%;height:auto;border-radius:8px"></div></div>
 </div>
 </section>
 
 <section>
 <h2 class="section-title">Pickled Egg Flavors</h2>
-<div class="flavors">
-<div class="flavor">Sully's Signature</div><div class="flavor">Sweet Thai Chili</div><div class="flavor">Mexican</div>
-<div class="flavor">Molé</div><div class="flavor">Cowboy Butter</div><div class="flavor">Cajun</div>
+<div class="cards">
+<div class="card"><h3>Sully's Signature Edition</h3><p>A bold fusion of tangy Carolina Gold barbecue flavor and the peppery kick of Tabasco. Zesty, savory, with a little Southern BBQ attitude and a touch of heat.</p><p class="price">$15 / jar • 18 eggs</p></div>
+<div class="card"><h3>Sweet Thai Chili</h3><p>A sweet-and-spicy flavor inspired by Thai chili, combining a touch of sweetness with a lively kick.</p><p class="price">$15 / jar • 18 eggs</p></div>
+<div class="card"><h3>Mexican</h3><p>A bold, south-of-the-border-inspired pickled egg with a zesty flavor profile.</p><p class="price">$15 / jar • 18 eggs</p></div>
+<div class="card"><h3>Molé</h3><p>A rich, Mexican-inspired flavor profile with savory depth and a distinctive character.</p><p class="price">$15 / jar • 18 eggs</p></div>
+<div class="card"><h3>Cowboy Butter</h3><p>A ranch-style twist inspired by cowboy butter, made for customers who enjoy a bold, savory flavor.</p><p class="price">$15 / jar • 18 eggs</p></div>
+<div class="card"><h3>Cajun</h3><p>A Southern-inspired pickled egg with a bold, zesty Cajun character.</p><p class="price">$15 / jar • 18 eggs</p></div>
+<div class="card"><h3>Sweet Beet Eggs</h3><p>Sweet, tangy pickled quail eggs with sliced beets for that classic sweet beet-pickle flavor.</p><p class="price">$15 / jar • 18 eggs</p></div>
+<div class="card"><h3>Ranchhand Mary — Pickled Quail Eggs</h3><p>Bloody Mary-inspired pickled quail eggs with your choice of mild flavor or a spicier kick.</p><p class="price">$15 / jar • 18 eggs</p></div>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Pickle Flavors</h2>
+<div class="cards">
+<div class="card"><h3>Ranchhouse</h3><p>A savory, ranch-style pickle with a bold seasoning blend.</p><p class="price">$8 / jar</p></div>
+<div class="card"><h3>Garlic Dill</h3><p>Classic garlic dill crunch, made right here at 2nd Chance Ranch.</p><p class="price">$8 / jar</p></div>
+<div class="card"><h3>The Tipsy Rancher</h3><p>Our Bourbon Maple pickle with a little country attitude.</p><p class="price">$8 / jar</p></div>
+<div class="card"><h3>Hellfire Pickles</h3><p>Not for the faint of heart! A fiery pickle with a serious kick for folks who like their crunch with some heat.</p><p class="price">$8 / jar</p></div>
+<div class="card"><h3>Ranchhand Mary Pickles</h3><p>Bloody Mary-inspired pickles, available in Mild or Spicy.</p><p class="price">$8 / jar</p></div>
 </div>
 </section>
 
 <section id="order">
 <h2 class="section-title">Place an Order</h2>
-<form action="https://formsubmit.co/orders@2crfarm.com" method="POST" onsubmit="return prepareOrder(event)">
+<form id="orderForm" action="https://formsubmit.co/orders@2crfarm.com" method="POST" onsubmit="handleSubmit(event)">
 <input type="hidden" name="_subject" value="New 2nd Chance Ranch Order">
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_next" value="https://2crfarm.com/?order=received">
 <input type="hidden" id="total_jars" name="Total Jars" value="0">
+<input type="hidden" id="total_items" name="Total Items" value="0">
 <input type="hidden" id="order_total" name="Order Total" value="$0.00">
+<input type="hidden" id="order_summary" name="Order Summary" value="">
 <div class="grid">
 <div><label>Name</label><input id="name" name="Customer Name" required></div>
-<div><label>Phone</label><input id="phone" name="Phone" required></div>
+<div><label>Phone</label><input id="phone" type="tel" inputmode="tel" autocomplete="tel" name="Phone" required></div>
 </div>
-<label>Products</label>
-<div class="order-row"><span>Ranchhouse Pickles — $8/jar</span><input type="number" min="0" value="0" name="Ranchhouse Pickles" data-price="8"></div>
+
 <label>Hog Shares</label>
-<div class="order-row"><span>Whole Hog Share — $350</span><input type="number" min="0" max="1" step="1" value="0" name="Whole Hog Share" data-price="350"></div>
-<div class="order-row"><span>Half Hog Share — $200 <small>(includes $25 half-share fee)</small></span><input type="number" min="0" max="1" step="1" value="0" name="Half Hog Share" data-price="200"></div>
-<p style="margin-top:8px;font-size:.95rem">Hog-share customers pay Woods directly for processing and the kill fee. The hog share payment is collected here.</p>
-<label>Pickled Egg Flavors</label>
-<div class="order-row"><span>Sully's Signature</span><input type="number" min="0" value="0" name="Sully's Signature" data-price="15"></div>
-<div class="order-row"><span>Sweet Thai Chili</span><input type="number" min="0" value="0" name="Sweet Thai Chili" data-price="15"></div>
-<div class="order-row"><span>Mexican</span><input type="number" min="0" value="0" name="Mexican" data-price="15"></div>
-<div class="order-row"><span>Molé</span><input type="number" min="0" value="0" name="Molé" data-price="15"></div>
-<div class="order-row"><span>Cowboy Butter</span><input type="number" min="0" value="0" name="Cowboy Butter" data-price="15"></div>
-<div class="order-row"><span>Cajun</span><input type="number" min="0" value="0" name="Cajun" data-price="15"></div>
+<div class="order-row"><span>Whole Hog Share — $350</span><input type="number" min="0" max="1" step="1" value="0" name="Whole Hog Share" data-price="350" data-kind="items"></div>
+<div class="order-row"><span>Half Hog Share — $200 <small>(includes $25 half-share convenience fee)</small></span><input type="number" min="0" max="1" step="1" value="0" name="Half Hog Share" data-price="200" data-kind="items"></div>
+<p style="margin:6px 0 14px;color:#6d4c2f;font-weight:700">Hog-share customers pay Woods directly for processing and the kill/dispatch fee. The hog-share payment is collected here.</p>
+
+<label>Pickles</label>
+<div class="order-row"><span>Ranchhouse Pickles — $8/jar</span><input type="number" min="0" value="0" name="Ranchhouse Pickles" data-price="8" data-kind="jars"></div>
+<div class="order-row"><span>Garlic Dill Pickles — $8/jar</span><input type="number" min="0" value="0" name="Garlic Dill Pickles" data-price="8" data-kind="jars"></div>
+<div class="order-row"><span>The Tipsy Rancher — $8/jar</span><input type="number" min="0" value="0" name="The Tipsy Rancher" data-price="8" data-kind="jars"></div>
+<div class="order-row"><span>Hellfire Pickles — $8/jar</span><input type="number" min="0" value="0" name="Hellfire Pickles" data-price="8" data-kind="jars"></div>
+<div class="order-row"><span>Ranchhand Mary Pickles — Mild — $8/jar</span><input type="number" min="0" value="0" name="Ranchhand Mary Pickles — Mild" data-price="8" data-kind="jars"></div>
+<div class="order-row"><span>Ranchhand Mary Pickles — Spicy — $8/jar</span><input type="number" min="0" value="0" name="Ranchhand Mary Pickles — Spicy" data-price="8" data-kind="jars"></div>
+
+<label>Pickled Egg Flavors — $15/jar</label>
+<div class="order-row"><span>Sully's Signature</span><input type="number" min="0" value="0" name="Sully's Signature" data-price="15" data-kind="jars"></div>
+<div class="order-row"><span>Sweet Thai Chili</span><input type="number" min="0" value="0" name="Sweet Thai Chili" data-price="15" data-kind="jars"></div>
+<div class="order-row"><span>Mexican</span><input type="number" min="0" value="0" name="Mexican" data-price="15" data-kind="jars"></div>
+<div class="order-row"><span>Molé</span><input type="number" min="0" value="0" name="Molé" data-price="15" data-kind="jars"></div>
+<div class="order-row"><span>Cowboy Butter</span><input type="number" min="0" value="0" name="Cowboy Butter" data-price="15" data-kind="jars"></div>
+<div class="order-row"><span>Cajun</span><input type="number" min="0" value="0" name="Cajun" data-price="15" data-kind="jars"></div>
+<div class="order-row"><span>Sweet Beet Eggs — $15/jar</span><input type="number" min="0" value="0" name="Sweet Beet Eggs" data-price="15" data-kind="jars"></div>
+<div class="order-row"><span>Ranchhand Mary Pickled Quail Eggs — Mild</span><input type="number" min="0" value="0" name="Ranchhand Mary Pickled Quail Eggs — Mild" data-price="15" data-kind="jars"></div>
+<div class="order-row"><span>Ranchhand Mary Pickled Quail Eggs — Spicy</span><input type="number" min="0" value="0" name="Ranchhand Mary Pickled Quail Eggs — Spicy" data-price="15" data-kind="jars"></div>
+
+<label>2CR Salsa — $8/jar</label>
+<div class="order-row"><span>2CR Ranchero Salsa — $8/jar</span><input type="number" min="0" value="0" name="2CR Ranchero Salsa" data-price="8" data-kind="jars"></div>
+<div class="order-row"><span>Tropical Heat Salsa — $8/jar</span><input type="number" min="0" value="0" name="Tropical Heat Salsa" data-price="8" data-kind="jars"></div>
+<div class="order-row"><span>Pickle Stampede — $8/jar</span><input type="number" min="0" value="0" name="Pickle Stampede" data-price="8" data-kind="jars"></div>
+
+<label>2CR Artisan Cheese — $10 per 8 oz block</label>
+<div class="order-row"><span>Smoked Colby — $10</span><input type="number" min="0" step="1" value="0" name="Smoked Colby Cheese" data-price="10" data-kind="items"></div>
+<div class="order-row"><span>Smoked Pepper Jack — $10</span><input type="number" min="0" step="1" value="0" name="Smoked Pepper Jack Cheese" data-price="10" data-kind="items"></div>
+<div class="order-row"><span>Gouda — $10</span><input type="number" min="0" step="1" value="0" name="Gouda Cheese" data-price="10" data-kind="items"></div>
+<div class="order-row"><span>Sharp Cheddar — $10</span><input type="number" min="0" step="1" value="0" name="Sharp Cheddar Cheese" data-price="10" data-kind="items"></div>
+
+<label>2CR Artisan Smokehouse Summer Sausage — $18 per 12 oz chub</label>
+<div class="order-row"><span>Rancher Sausage — Original — $18</span><input type="number" min="0" step="1" value="0" name="Rancher Sausage" data-price="18" data-kind="items"></div>
+<div class="order-row"><span>Jalapeño Cheddar — $18</span><input type="number" min="0" step="1" value="0" name="Jalapeño Cheddar Summer Sausage" data-price="18" data-kind="items"></div>
+<div class="order-row"><span>Pepper Jack — $18</span><input type="number" min="0" step="1" value="0" name="Pepper Jack Summer Sausage" data-price="18" data-kind="items"></div>
+<div class="order-row"><span>Triple Threat — three-way blend — $18</span><input type="number" min="0" step="1" value="0" name="Triple Threat Summer Sausage" data-price="18" data-kind="items"></div>
+
+<label>Tabby's Rustic Roots Candles — $15 each</label>
+<div class="order-row"><span>Backroad Apple Candle — $15</span><input type="number" min="0" value="0" name="Backroad Apple Candle" data-price="15" data-kind="items"></div>
+<div class="order-row"><span>Blueberry Muffin Candle — $15</span><input type="number" min="0" value="0" name="Blueberry Muffin Candle" data-price="15" data-kind="items"></div>
+<div class="order-row"><span>Pumpkin Pie Candle — $15</span><input type="number" min="0" value="0" name="Pumpkin Pie Candle" data-price="15" data-kind="items"></div>
+
+<label>Quail Broilers — 6 for $30</label>
+<div class="order-row"><span>Quail Broilers — 6 for $30</span><input id="quailBroilerQty" type="number" min="0" step="1" value="0" name="Quail Broilers (6-pack)" data-kind="quailbroilers"></div>
+
+<label>Chicken Broilers — $5/lb, capped at $25 each</label>
+<div class="grid">
+<div><label>Number of Broilers</label><input id="broilerQty" type="number" min="0" step="1" value="0" name="Chicken Broilers"></div>
+<div><label>Weight Per Broiler (lb)</label><input id="broilerWeight" type="number" min="0" step="0.1" value="0" name="Broiler Weight Per Bird (lb)"></div>
+</div>
+<p style="margin:6px 0 14px;color:#6d4c2f;font-weight:700">Broiler price is calculated at $5/lb, with a maximum of $25 per bird.</p>
+
+<label>2nd Chance Ranch T-Shirts — $25 each</label>
+<p style="margin:6px 0 14px;color:#6d4c2f;font-weight:700">Veteran owned &amp; operated. Army Green or Sand. Made to order.</p>
+<div class="grid">
+<div><label>Color</label><select id="shirtColor" name="T-Shirt Color">
+<option value="">Select color</option>
+<option value="Army Green">Army Green</option>
+<option value="Sand">Sand</option>
+</select></div>
+<div><label>Size</label><select id="shirtSize" name="T-Shirt Size">
+<option value="">Select size</option>
+<option value="Small">Small</option>
+<option value="Medium">Medium</option>
+<option value="Large">Large</option>
+<option value="XL">XL</option>
+<option value="2XL">2XL</option>
+</select></div>
+</div>
+<div class="order-row"><span>T-Shirt Quantity</span><input id="shirtQty" type="number" min="0" step="1" value="0" name="2CR T-Shirt Quantity"></div>
+
 <label>Notes</label><textarea id="notes" name="Notes" rows="3"></textarea>
-<label>Payment</label><select id="payment" name="Payment"><option>Cash</option><option>Credit Card</option></select>
-<div class="total">Total Jars: <span id="jars">0</span> &nbsp; | &nbsp; Total: $<span id="total">0</span></div>
-<button class="btn" type="submit" style="border:0;cursor:pointer;margin-top:18px">SUBMIT ORDER</button>
+
+<label>Payment</label>
+<select id="payment" name="Payment">
+<option value="cash">Cash Pickup</option>
+<option value="square">Pay Online with Square</option>
+</select>
+
+<div class="total">Total Jars: <span id="jars">0</span> &nbsp; | &nbsp; Total Items: <span id="items">0</span> &nbsp; | &nbsp; Total: $<span id="total">0.00</span></div>
+<button id="submitButton" class="btn" type="submit" style="border:0;cursor:pointer;margin-top:18px">SUBMIT ORDER</button>
 <p id="message" style="font-weight:800"></p>
 </form>
 </section>
@@ -100,33 +300,162 @@ footer{background:var(--ink);color:#fff;text-align:center;padding:28px;margin-to
 <footer><strong>2ND CHANCE RANCH</strong><br>Farm Fresh • Small Batch • Made Local</footer>
 <script>
 const inputs=[...document.querySelectorAll('[data-price]')];
-function calc(){let jars=0,total=0;inputs.forEach(i=>{let q=Number(i.value)||0;jars+=q;total+=q*Number(i.dataset.price)});document.getElementById('jars').textContent=jars;document.getElementById('total').textContent=total.toFixed(2);document.getElementById('total_jars').value=jars;document.getElementById('order_total').value='$'+total.toFixed(2)}
-inputs.forEach(i=>i.addEventListener('input',calc));
-async function prepareOrder(e){
-  calc();
-  const whole=Number(document.querySelector('[name="Whole Hog Share"]').value)||0;
-  const half=Number(document.querySelector('[name="Half Hog Share"]').value)||0;
-  if(!whole && !half) return true;
-  if(e) e.preventDefault();
-  const name=document.getElementById('name').value.trim();
-  const phone=document.getElementById('phone').value.trim();
-  const notes=document.getElementById('notes').value.trim();
+const broilerQty=document.getElementById('broilerQty');
+const broilerWeight=document.getElementById('broilerWeight');
+
+function broilerTotal(){
+  const qty=Math.max(0,Math.floor(Number(broilerQty.value)||0));
+  const weight=Math.max(0,Number(broilerWeight.value)||0);
+  return qty*Math.min(weight*5,25);
+}
+
+function shirtTotal(){
+  const q=Math.max(0,Math.floor(Number(document.getElementById('shirtQty').value)||0));
+  return q*25;
+}
+
+function calc(){
+  let jars=0,total=broilerTotal()+shirtTotal();
+  let itemCount=0;
+  const qb=Math.max(0,Math.floor(Number(document.getElementById('quailBroilerQty').value)||0));
+  total+=qb*30;
+  itemCount+=qb;
+  inputs.forEach(i=>{
+    const q=Math.max(0,Math.floor(Number(i.value)||0));
+    if(i.dataset.kind==='jars') jars+=q;
+    itemCount+=q;
+    total+=q*Number(i.dataset.price);
+  });
+  const bq=Math.max(0,Math.floor(Number(broilerQty.value)||0));
+  const sq=Math.max(0,Math.floor(Number(document.getElementById('shirtQty').value)||0));
+  itemCount+=bq+sq;
+  document.getElementById('jars').textContent=jars;
+  document.getElementById('items').textContent=itemCount;
+  document.getElementById('total').textContent=total.toFixed(2);
+  document.getElementById('total_jars').value=jars;
+  document.getElementById('total_items').value=itemCount;
+  document.getElementById('order_total').value='$'+total.toFixed(2);
+  return total;
+}
+
+function orderSummary(){
+  const parts=[];
+  const qb=Math.max(0,Math.floor(Number(document.getElementById('quailBroilerQty').value)||0));
+  if(qb) parts.push('Quail Broilers (6-pack): '+qb);
+  inputs.forEach(i=>{
+    const q=Math.max(0,Math.floor(Number(i.value)||0));
+    if(q) parts.push(i.name+': '+q);
+  });
+  const bq=Math.max(0,Math.floor(Number(broilerQty.value)||0));
+  const bw=Math.max(0,Number(broilerWeight.value)||0);
+  if(bq) parts.push('Chicken Broilers: '+bq+' at '+bw.toFixed(1)+' lb each');
+  const sq=Math.max(0,Math.floor(Number(document.getElementById('shirtQty').value)||0));
+  const sc=document.getElementById('shirtColor').value;
+  const ss=document.getElementById('shirtSize').value;
+  if(sq) parts.push('2CR T-Shirt: '+sq+' — '+sc+' — '+ss);
+  return parts.join(' | ');
+}
+
+function squareItems(){
   const items=[];
-  if(whole) items.push({key:'Whole Hog Share',quantity:whole});
-  if(half) items.push({key:'Half Hog Share',quantity:half});
+  inputs.forEach(i=>{
+    const q=Math.max(0,Math.floor(Number(i.value)||0));
+    if(q) items.push({key:i.name, quantity:q});
+  });
+  const bq=Math.max(0,Math.floor(Number(broilerQty.value)||0));
+  const bw=Math.max(0,Number(broilerWeight.value)||0);
+  const qb=Math.max(0,Math.floor(Number(document.getElementById('quailBroilerQty').value)||0));
+  if(bq) items.push({key:'Chicken Broilers', quantity:bq, weight:bw});
+  if(qb) items.push({key:'Quail Broilers', quantity:qb});
+  const sq=Math.max(0,Math.floor(Number(document.getElementById('shirtQty').value)||0));
+  const sc=document.getElementById('shirtColor').value;
+  const ss=document.getElementById('shirtSize').value;
+  if(sq) items.push({key:'2CR T-Shirt', quantity:sq, color:sc, size:ss});
+  return items;
+}
+
+const shirtQty=document.getElementById('shirtQty');
+const shirtColor=document.getElementById('shirtColor');
+const shirtSize=document.getElementById('shirtSize');
+inputs.forEach(i=>i.addEventListener('input',calc));
+inputs.forEach(i=>i.addEventListener('change',calc));
+broilerQty.addEventListener('input',calc);
+broilerWeight.addEventListener('input',calc);
+const quailBroilerQty=document.getElementById('quailBroilerQty');
+quailBroilerQty.addEventListener('input',calc);
+shirtQty.addEventListener('input',calc);
+shirtColor.addEventListener('change',calc);
+shirtSize.addEventListener('change',calc);
+
+function normalizePhone(value){
+  const digits=String(value||'').replace(/\D/g,'');
+  if(digits.length===10) return '1'+digits;
+  if(digits.length===11 && digits.startsWith('1')) return digits;
+  return String(value||'').trim();
+}
+
+const phoneInput=document.getElementById('phone');
+phoneInput.addEventListener('blur',()=>{ if(phoneInput.value.trim()) phoneInput.value=normalizePhone(phoneInput.value); });
+phoneInput.addEventListener('change',()=>{ if(phoneInput.value.trim()) phoneInput.value=normalizePhone(phoneInput.value); });
+phoneInput.addEventListener('input',()=>{
+  const digits=phoneInput.value.replace(/\D/g,'');
+  if(digits.length===10 || (digits.length===11 && digits.startsWith('1'))) phoneInput.value=normalizePhone(phoneInput.value);
+});
+
+async function handleSubmit(event){
+  phoneInput.value=normalizePhone(phoneInput.value);
+  calc();
+  const payment=document.getElementById('payment').value;
+  const total=Number(document.getElementById('total').textContent)||0;
   const message=document.getElementById('message');
-  message.textContent='Creating your secure Square checkout…';
+  const button=document.getElementById('submitButton');
+  document.getElementById('order_summary').value=orderSummary();
+
+  const sq=Math.max(0,Math.floor(Number(shirtQty.value)||0));
+  if(sq>0 && (!shirtColor.value || !shirtSize.value)){
+    event.preventDefault();
+    message.textContent='Please choose a shirt color and size.';
+    return;
+  }
+  if(total<=0){
+    event.preventDefault();
+    message.textContent='Please add at least one item to your order.';
+    return;
+  }
+
+  if(payment==='cash'){
+    return;
+  }
+
+  event.preventDefault();
+  button.disabled=true;
+  button.textContent='CREATING SQUARE CHECKOUT...';
+  message.textContent='';
+
+  const payload={
+    name:document.getElementById('name').value.trim(),
+    phone:document.getElementById('phone').value.trim(),
+    notes:document.getElementById('notes').value.trim(),
+    items:squareItems()
+  };
+
   try{
-    const r=await fetch('/api/create-checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,phone,notes,items})});
-    const data=await r.json();
-    if(!r.ok || !data.url) throw new Error(data.error||'Square checkout could not be created.');
+    const response=await fetch('/api/create-checkout',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(payload)
+    });
+    const data=await response.json();
+    if(!response.ok || !data.url) throw new Error(data.error || 'Unable to create Square checkout.');
     window.location.href=data.url;
   }catch(err){
+    button.disabled=false;
+    button.textContent='SUBMIT ORDER';
     message.textContent=err.message;
-    return false;
   }
-  return false;
 }
+
+calc();
 </script>
 </body>
 </html>
