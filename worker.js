@@ -34,7 +34,7 @@ const PRICES = {
   "Pumpkin Pie Candle": 1500,
   "Quail Broilers": 3000,
 
-"2CR T-shirt": 2500
+"2CR T-Shirt": 2500,
 "Whole Hog Share": 35000,
 "Half Hog Share": 20000
 };
